@@ -5,11 +5,11 @@
 
 'use strict';
 
-var fs = require('fs');
+var fs = require('fs'); //yer ke blind
 var express = require('express');
 var app = express();
 
-if (!process.env.DISABLE_XORIGIN) {
+if (!process.env.DISABLE_XORIGIN) { //ok moving to the remote
   app.use(function(req, res, next) {
     var allowedOrigins = ['https://narrow-plane.gomix.me', 'https://www.freecodecamp.com'];
     var origin = req.headers.origin || '*';
